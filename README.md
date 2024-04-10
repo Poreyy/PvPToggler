@@ -2,7 +2,8 @@ PvPToggler is a Spigot/Bukkit plugin that allows players to toggle PvP on and of
 
 Github repository credits to: [Olivo_dev](https://github.com/Olivoz)
 
-**IMPORTANT**: Make sure there are **NO** other plugins/settings managing PvP and conflicting with PvPToggler.
+**IMPORTANT**: 
+- Make sure there are **NO** other plugins/settings managing PvP and conflicting with PvPToggler.
 
 **Installation Guide**:
 Installing is incredibly easy and only consists of 5 steps;
@@ -33,4 +34,4 @@ they disable PvP.
 - Compatible; This plugin is written to be compatible on legacy(1.8) & newer(1.20) versions of Minecraft.
 
 **Support**:
-For any problems, bugs, suggestions or questions regarding the plugin, contact the author using discord; *porey* is the username.
+- For any problems, bugs, suggestions or questions regarding the plugin, contact the author using discord; *porey* is the username.
