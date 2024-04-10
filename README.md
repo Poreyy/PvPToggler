@@ -6,7 +6,7 @@ Github repository credits to: [Olivo_dev](https://github.com/Olivoz)
 - Make sure there are **NO** other plugins/settings managing PvP and conflicting with PvPToggler.
 
 **Installation Guide**:
-Installing is incredibly easy and only consists of 5 steps;
+- Installing is incredibly easy and only consists of 5 steps;
 1. Download the plugin jar
 2. Stop your server
 3. Drag and drop the plugin into your plugins folder
