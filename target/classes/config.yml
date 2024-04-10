@@ -1,0 +1,32 @@
+# PvP Toggle messages.
+pvp-enabled: "&aSuccessfully enabled pvp!"
+pvp-disabled: "&eSuccessfully disabled pvp!"
+
+# PvP Toggle for other players messages.
+pvp-enabled-other: "&aSuccessfully enabled pvp for &e{target}&a!"
+pvp-disabled-other: "&eSuccessfully disabled pvp for &e{target}!"
+
+# Death message
+death-message: "&c{victim} &7was slain by &a{killer}"
+
+# Console commands after pvp enables.
+# You can use this to give players kits
+# when they enable pvp
+on-pvp-enable-console-commands: []
+
+# Console commands after pvp disables.
+on-pvp-disable-console-commands: []
+
+# Save player inventory when they enable pvp
+# and re-apply it when they disable pvp?
+save-inventory-and-reapply: true
+
+# Save player location when they enable pvp
+# and re-teleport them when they disable pvp?
+save-location-and-teleport: true
+
+# Allow health to go down in pvp?
+# If this option is enabled, then
+# the player will appear to be taking damage
+# but their health will not go down.
+keep-at-max-health: true

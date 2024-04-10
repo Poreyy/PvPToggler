@@ -1,0 +1,40 @@
+# General messages
+general-messages:
+  reload-message: "&aSuccessfully reloaded plugin!"
+  only-players: "&cI'm sorry, but only players are allowed to perform this command."
+  player-not-found: "&cCould not find specified player."
+
+# PvP Toggle messages.
+pvp-enabled: "&aSuccessfully enabled pvp!"
+pvp-disabled: "&eSuccessfully disabled pvp!"
+
+# PvP Toggle for other players messages.
+pvp-enabled-other: "&aSuccessfully enabled pvp for &e{target}&a!"
+pvp-disabled-other: "&eSuccessfully disabled pvp for &e{target}!"
+
+# Death message
+death-message: "&c{victim} &7was slain by &a{killer} &7(&c{health}&7)"
+
+# Console commands that get
+# executed after pvp enables.
+# Example: You can use this to give players kits
+# when they enable pvp.
+on-pvp-enable-console-commands: []
+
+# Console commands that get
+# executed after pvp disables.
+on-pvp-disable-console-commands: []
+
+# Save player inventory when they enable pvp
+# and re-apply it when they disable pvp?
+save-inventory-and-reapply: false
+
+# Save player location when they enable pvp
+# and re-teleport them there when they disable pvp?
+save-location-and-teleport: false
+
+# Allow health to go down in pvp?
+# If this option is enabled, then
+# the player will appear to be taking damage
+# but their health will not go down.
+stay-at-max-health: true
