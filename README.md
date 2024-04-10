@@ -20,7 +20,7 @@ Github repository credits to: [Olivo_dev](https://github.com/Olivoz)
 
 - Easy to use; Configuring and using is extremely simple. Everything in the config.yml file is documented and explained well.
 
-- Toggle-commands; You can execute certain commands when a player enables/disables PvP using the *on-pvp-enable/disable* feature.
+- Toggle-commands; You can make console execute certain commands when a player enables/disables PvP using the *on-pvp-enable/disable* feature.
 
 - Cached-inventories; This feature saves a player's inventory when they enable PvP and restores it when they disable PvP.
 
