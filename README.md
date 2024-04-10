@@ -1,5 +1,7 @@
 PvPToggler is a Spigot/Bukkit plugin that allows players to toggle PvP on and off (mainly used by Survival servers). This particular plugin can also be used as a Lobby mini-game.
 
+Credits to: [Olivo](https://github.com/Olivoz)
+
 **IMPORTANT**: Make sure there are **NO** other plugins/settings managing PvP and conflicting with PvPToggler.
 
 **Installation Guide**:
