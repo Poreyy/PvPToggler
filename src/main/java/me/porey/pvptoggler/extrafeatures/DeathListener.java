@@ -3,6 +3,7 @@ package me.porey.pvptoggler.extrafeatures;
 import me.porey.pvptoggler.PvPTogglerPlugin;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
 
@@ -18,7 +19,7 @@ public class DeathListener implements Listener {
 
     private static final DecimalFormat PLAYER_HEALTH_FORMAT = new DecimalFormat("#.##");
 
-    @EventHandler
+    @EventHandler(priority = EventPriority.HIGHEST)
     public void onDeath(PlayerDeathEvent e) {
         Player victim = e.getEntity();
         Player killer = victim.getKiller();

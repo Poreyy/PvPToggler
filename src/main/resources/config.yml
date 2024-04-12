@@ -37,14 +37,14 @@ on-pvp-disable-console-commands: []
 
 # Save player inventory when they enable pvp
 # and re-apply it when they disable pvp?
-save-inventory-and-reapply: false
+cached-inventories: false
 
 # Save player location when they enable pvp
 # and re-teleport them there when they disable pvp?
-save-location-and-teleport: false
+cached-locations: false
 
 # Allow health to go down in pvp?
 # If this option is enabled, then
 # the player will appear to be taking damage
 # but their health will not go down.
-stay-at-max-health: true
+stay-at-max-health: false

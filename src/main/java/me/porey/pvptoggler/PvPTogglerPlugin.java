@@ -29,7 +29,7 @@ public final class PvPTogglerPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         new UpdateChecker(this, UpdateCheckSource.SPIGOT, SPIGOT_RESOURCE_ID).checkEveryXHours(24).checkNow();
-        saveDefaultConfig();
+        initConfig();
         registerManagers();
         loadHooks();
         initializeListeners();
@@ -39,6 +39,11 @@ public final class PvPTogglerPlugin extends JavaPlugin {
     @Override
     public void onDisable() {
         this.pvpManager.onDisable();
+    }
+
+    private void initConfig() {
+        getConfig().options().copyDefaults(true);
+        saveDefaultConfig();
     }
 
     private void registerManagers() {
