@@ -2,6 +2,7 @@ package me.porey.pvptoggler.extrafeatures;
 
 import me.porey.pvptoggler.pvp.PvPManager;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 
@@ -13,7 +14,7 @@ public class HealthListener implements Listener {
         this.pvpManager = pvpManager;
     }
 
-    @EventHandler
+    @EventHandler(priority = EventPriority.LOWEST)
     public void onDamage(EntityDamageByEntityEvent e) {
         if (!pvpManager.isFighter(e.getEntity().getUniqueId()))
             return;

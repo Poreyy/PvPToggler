@@ -1,6 +1,7 @@
 package me.porey.pvptoggler.pvp;
 
 import me.porey.pvptoggler.PvPTogglerPlugin;
+import org.bukkit.Bukkit;
 import org.bukkit.Server;
 import org.bukkit.entity.Player;
 
@@ -29,7 +30,7 @@ public class PvPManager {
             this.fighters.add(p.getUniqueId());
             plugin.getRollbackManager().savePlayer(p);
 
-            plugin.getConfig().getStringList("on-pvp-enable-console-commands").forEach(command -> server.dispatchCommand(server.getConsoleSender(), command.replace("{player}", p.getName())));
+            plugin.getConfig().getStringList("on-pvp-enable-console-commands").forEach(command -> server.dispatchCommand(server.getConsoleSender(), command.replaceFirst("", "").replace("{player}", p.getName())));
             return;
         }
         this.fighters.remove(p.getUniqueId());
@@ -40,5 +41,9 @@ public class PvPManager {
 
     public boolean isFighter(UUID playerUUID) {
         return this.fighters.contains(playerUUID);
+    }
+
+    public void onDisable() {
+        Bukkit.getOnlinePlayers().forEach(player -> plugin.getRollbackManager().restorePlayer(player));
     }
 }

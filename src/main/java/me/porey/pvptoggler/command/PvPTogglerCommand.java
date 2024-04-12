@@ -18,14 +18,19 @@ public class PvPTogglerCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, @Nonnull Command command, @Nonnull String label, @Nonnull String[] args) {
+        long currentTime = System.currentTimeMillis();
+
         plugin.reloadConfig();
 
         CachedMessages cachedMessages = plugin.getCachedMessages();
         cachedMessages.clearCaches();
 
-        plugin.registerListeners();
+        plugin.registerOptionalListeners();
 
-        sender.sendMessage(cachedMessages.fromConfig("general-messages.reload-message"));
+        sender.sendMessage(cachedMessages.fromConfig(
+                        "general-messages.reload-message")
+                .replace("{time}", System.currentTimeMillis() - currentTime + "")
+        );
         return false;
     }
 }
