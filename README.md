@@ -34,7 +34,7 @@ they disable PvP.
 
 * Compatible; This plugin is written to be compatible on legacy(1.8) & newer(1.20) versions of Minecraft.
 
-* And more; Putting every feature will make this list be so messy, thus, you can discover the rest yourself!
+* And more; You can discover the rest yourself!
 
 # Support
 For any problems, bugs, suggestions or questions regarding the plugin, contact the author using discord; *porey* is the username.
