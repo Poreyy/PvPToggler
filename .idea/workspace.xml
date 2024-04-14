@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="042485bb-b3dd-410d-a7d0-4aa0fd1ced85" name="Changes" comment="Updated README.md">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/porey/pvptoggler/PvPTogglerPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/porey/pvptoggler/PvPTogglerPlugin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/porey/pvptoggler/command/PvPCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/porey/pvptoggler/command/PvPCommand.java" afterDir="false" />
@@ -24,6 +23,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Poreyy&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="93f34cae-4773-4a95-bc87-da4db9cc3a00" />
+        <option name="url" value="https://github.com/Poreyy/PvPToggler.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
