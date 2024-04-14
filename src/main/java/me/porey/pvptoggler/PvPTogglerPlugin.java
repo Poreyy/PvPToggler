@@ -15,6 +15,8 @@ import org.bukkit.event.HandlerList;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.Objects;
+
 public final class PvPTogglerPlugin extends JavaPlugin {
 
     private final static String SPIGOT_RESOURCE_ID = "116141";
@@ -90,8 +92,8 @@ public final class PvPTogglerPlugin extends JavaPlugin {
     }
 
     private void registerCommands() {
-        getCommand("pvp").setExecutor(new PvPCommand(this));
-        getCommand("pvptoggler").setExecutor(new PvPTogglerCommand(this));
+        Objects.requireNonNull(getCommand("pvp")).setExecutor(new PvPCommand(this));
+        Objects.requireNonNull(getCommand("pvptoggler")).setExecutor(new PvPTogglerCommand(this));
     }
 
     public CachedMessages getCachedMessages() {

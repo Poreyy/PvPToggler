@@ -59,6 +59,7 @@ public class PvPCommand implements CommandExecutor {
         UUID targetUUID = target.getUniqueId();
 
         boolean isFighter = !pvpManager.isFighter(targetUUID);
+
         pvpManager.setFighter(target, isFighter);
 
         if(self)
