@@ -4,6 +4,7 @@ Github repository credits to: [Olivo_dev](https://github.com/Olivoz)
 
 # Important
 Make sure there are **NO** other plugins/settings managing PvP and conflicting with PvPToggler.
+People often have their server's pvp disabled in the server.properties file and complain about the plugin not working.
 
 # Installation Guide
 Installing is incredibly easy and only consists of 5 steps;
