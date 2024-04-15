@@ -32,7 +32,7 @@ public class PvPCommand implements CommandExecutor {
             togglePvP(p, p, true);
             return true;
         }
-        if(args[0].equalsIgnoreCase("-info")) {
+        if(args[0].equalsIgnoreCase("info")) {
             sendInfoMenu(p);
             return true;
         }
@@ -50,7 +50,7 @@ public class PvPCommand implements CommandExecutor {
     }
 
     private void sendInfoMenu(Player p) {
-        p.sendMessage(cachedMessages.colorize("&aPvPToggler plugin made by&e Porey&a!"));
+        p.sendMessage(cachedMessages.colorize("&aAuthor:&e Porey!"));
         p.sendMessage(cachedMessages.colorize("&aMinecraft user:&e Poreyy"));
         p.sendMessage(cachedMessages.colorize("&aDiscord user:&e porey"));
     }

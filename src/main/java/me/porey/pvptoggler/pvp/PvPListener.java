@@ -4,7 +4,6 @@ import me.porey.pvptoggler.PvPTogglerPlugin;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
-import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
@@ -17,7 +16,7 @@ class PvPListener implements Listener {
         this.plugin = plugin;
     }
 
-    @EventHandler(priority = EventPriority.LOWEST, ignoreCancelled = true)
+    @EventHandler(ignoreCancelled = true)
     public void onDamageByEntity(EntityDamageByEntityEvent e) {
         if (e.getEntityType() != EntityType.PLAYER)
             return;
@@ -30,6 +29,7 @@ class PvPListener implements Listener {
         PvPManager pvpManager = plugin.getPvPManager();
 
         if (pvpManager.isFighter(attacker.getUniqueId()) && pvpManager.isFighter(attacked.getUniqueId())) {
+            e.setCancelled(false);
             return;
         }
 
