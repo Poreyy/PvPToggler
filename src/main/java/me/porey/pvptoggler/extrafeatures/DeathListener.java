@@ -4,6 +4,7 @@ import me.porey.pvptoggler.PvPTogglerPlugin;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
+import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
 
@@ -26,7 +27,7 @@ public class DeathListener implements Listener {
 
         if (killer == null) return;
 
-        e.setDeathMessage(plugin.getCachedMessages().fromConfig("death-message")
+        e.setDeathMessage(plugin.getPvPToggler().getCachedMessages().fromConfig("death-message")
                 .replace("{victim}", victim.getName())
                 .replace("{killer}", killer.getName())
                 .replace("{health}", getHealth(killer))
@@ -35,5 +36,12 @@ public class DeathListener implements Listener {
 
     private String getHealth(Player p) {
         return PLAYER_HEALTH_FORMAT.format(p.getHealth() / 2);
+    }
+
+    public void registerOptionally() {
+        if(plugin.getConfig().getBoolean("format-death-message"))
+            plugin.getServer().getPluginManager().registerEvents(this, plugin);
+        else
+            HandlerList.unregisterAll(this);
     }
 }

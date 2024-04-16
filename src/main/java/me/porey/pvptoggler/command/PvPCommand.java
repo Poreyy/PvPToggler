@@ -1,24 +1,23 @@
 package me.porey.pvptoggler.command;
 
-import me.porey.pvptoggler.PvPTogglerPlugin;
-import me.porey.pvptoggler.pvp.PvPManager;
-import me.porey.pvptoggler.util.CachedMessages;
+import me.porey.pvptoggler.PvPToggler;
+import me.porey.pvptoggler.pvp.FightManager;
+import me.porey.pvptoggler.util.CachedValues;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import javax.annotation.Nonnull;
-import java.util.UUID;
 
 public class PvPCommand implements CommandExecutor {
 
-    private final CachedMessages cachedMessages;
-    private final PvPManager pvpManager;
+    private final CachedValues<String> cachedMessages;
+    private final FightManager pvpManager;
 
-    public PvPCommand(PvPTogglerPlugin plugin) {
-        this.cachedMessages = plugin.getCachedMessages();
-        this.pvpManager = plugin.getPvPManager();
+    public PvPCommand(PvPToggler pvpToggler) {
+        this.cachedMessages = pvpToggler.getCachedMessages();
+        this.pvpManager = pvpToggler.getFightManager();
     }
 
     @Override
@@ -56,11 +55,12 @@ public class PvPCommand implements CommandExecutor {
     }
 
     private void togglePvP(CommandSender sender, Player target, boolean self) {
-        UUID targetUUID = target.getUniqueId();
+        boolean isFighter = !pvpManager.isFighter(target);
 
-        boolean isFighter = !pvpManager.isFighter(targetUUID);
-
-        pvpManager.setFighter(target, isFighter);
+        if(isFighter)
+            pvpManager.removeFighter(target);
+        else
+            pvpManager.addFighter(target);
 
         if(self)
             sender.sendMessage(cachedMessages.fromConfig(isFighter ? "pvp-enabled" : "pvp-disabled"));

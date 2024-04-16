@@ -1,7 +1,7 @@
 package me.porey.pvptoggler.command;
 
 import me.porey.pvptoggler.PvPTogglerPlugin;
-import me.porey.pvptoggler.util.CachedMessages;
+import me.porey.pvptoggler.util.CachedValues;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -22,15 +22,12 @@ public class PvPTogglerCommand implements CommandExecutor {
 
         plugin.reloadConfig();
 
-        CachedMessages cachedMessages = plugin.getCachedMessages();
+        CachedValues<String> cachedMessages = plugin.getPvPToggler().getCachedMessages();
         cachedMessages.clearCaches();
 
         plugin.registerOptionalListeners();
 
-        sender.sendMessage(cachedMessages.fromConfig(
-                        "general-messages.reload-message")
-                .replace("{time}", System.currentTimeMillis() - currentTime + "")
-        );
+        sender.sendMessage(cachedMessages.fromConfig("general-messages.reload-message").replace("{time}", String.valueOf(System.currentTimeMillis() - currentTime)));
         return false;
     }
 }

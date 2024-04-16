@@ -6,11 +6,11 @@ import org.bukkit.ChatColor;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CachedMessages {
+public class CachedStringValues implements CachedValues<String> {
 
     private final PvPTogglerPlugin plugin;
 
-    public CachedMessages(PvPTogglerPlugin plugin) {
+    public CachedStringValues(PvPTogglerPlugin plugin) {
         this.plugin = plugin;
     }
 
@@ -20,6 +20,7 @@ public class CachedMessages {
         String configValue = plugin.getConfig().getString(key, key);
         return colorize(configValue);
     }
+
     public String colorize(String text) {
         return cachedMessages.computeIfAbsent(text, (string) -> ChatColor.translateAlternateColorCodes('&', string));
     }

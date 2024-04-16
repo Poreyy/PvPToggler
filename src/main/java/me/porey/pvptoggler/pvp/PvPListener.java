@@ -23,12 +23,9 @@ class PvPListener implements Listener {
         if (e.getDamager().getType() != EntityType.PLAYER)
             return;
 
-        Player attacked = (Player) e.getEntity();
-        Player attacker = (Player) e.getDamager();
+        FightManager pvpManager = plugin.getPvPToggler().getFightManager();
 
-        PvPManager pvpManager = plugin.getPvPManager();
-
-        if (pvpManager.isFighter(attacker.getUniqueId()) && pvpManager.isFighter(attacked.getUniqueId())) {
+        if (pvpManager.isFighter((Player) e.getEntity()) && pvpManager.isFighter((Player) e.getDamager())) {
             e.setCancelled(false);
             return;
         }
@@ -38,6 +35,6 @@ class PvPListener implements Listener {
 
     @EventHandler
     public void onQuit(PlayerQuitEvent e) {
-        plugin.getPvPManager().setFighter(e.getPlayer(), false);
+        plugin.getPvPToggler().getFightManager().removeFighter(e.getPlayer());
     }
 }

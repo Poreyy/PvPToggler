@@ -48,3 +48,17 @@ cached-locations: false
 # the player will appear to be taking damage
 # but their health will not go down.
 stay-at-max-health: false
+
+# PlaceholderAPI "%pvptoggler_pvp%" placeholder output
+# true; the output if PvP is on
+# false; the output if PvP is off
+placeholders-output:
+  true: "On"
+  false: "Off"
+
+# MySQL Connection
+# Use MySQL if you want to
+# sync PvP statuses.
+mysql-connection:
+  enabled: false
+  address: ""
