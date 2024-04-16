@@ -15,6 +15,7 @@ public class PvPTogglerImpl implements PvPToggler {
 
     public PvPTogglerImpl(PvPTogglerPlugin plugin) {
         this.fightManager = new FightManagerImpl(plugin);
+        this.fightManager.register();
         this.cachedStringValues = new CachedStringValues(plugin);
         this.rollbackManager = new RollbackManagerImpl(plugin);
     }
