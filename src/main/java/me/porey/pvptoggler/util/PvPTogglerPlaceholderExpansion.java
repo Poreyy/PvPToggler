@@ -9,12 +9,12 @@ import org.jetbrains.annotations.Nullable;
 
 public class PvPTogglerPlaceholderExpansion extends PlaceholderExpansion {
 
-    private final CachedStringValues cachedMessages;
+    private final CachedValues<String> cachedMessages;
     private final FightManager pvpManager;
 
     public PvPTogglerPlaceholderExpansion(PvPTogglerPlugin plugin) {
-        this.cachedMessages = plugin.getCachedMessages();
-        this.pvpManager = plugin.getPvPManager();
+        this.cachedMessages = plugin.getPvPToggler().getCachedMessages();
+        this.pvpManager = plugin.getPvPToggler().getFightManager();
     }
 
     @Override
