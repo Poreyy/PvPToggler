@@ -13,7 +13,7 @@ Installing is incredibly easy and only consists of 3 steps;
 2. Drag and drop the plugin into your plugins folder
 3. (Re)start your server - **do not reload**
 
-Done!
+Done! You can now configure the plugin's config.yml file and modify features as you wish!
 
 # Features
 * Lightweight; This plugin is written to be as light-weight and performant as possible.
