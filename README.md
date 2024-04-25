@@ -7,13 +7,13 @@ Make sure there are **NO** other plugins/settings managing PvP and conflicting w
 People often have their server's pvp disabled in the server.properties file and complain about the plugin not working.
 
 # Installation Guide
-Installing is incredibly easy and only consists of 5 steps;
+Installing is incredibly easy and only consists of 3 steps;
 
 1. Download the plugin jar
-2. Stop your server
-3. Drag and drop the plugin into your plugins folder
-4. (Re)start your server - **do not reload**
-5. Done! You can now configure the plugin via the config.yml file and modify features as you wish!
+2. Drag and drop the plugin into your plugins folder
+3. (Re)start your server - **do not reload**
+
+Done!
 
 # Features
 * Lightweight; This plugin is written to be as light-weight and performant as possible.
