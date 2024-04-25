@@ -4,11 +4,11 @@ general-messages:
   only-players: "&cI'm sorry, but only players are allowed to perform this command."
   player-not-found: "&cCould not find specified player."
 
-# PvP Toggle messages.
+# PvP Toggle messages
 pvp-enabled: "&aSuccessfully enabled pvp!"
 pvp-disabled: "&eSuccessfully disabled pvp!"
 
-# PvP Toggle for other players messages.
+# PvP Toggle for other players messages
 pvp-enabled-other: "&aSuccessfully enabled pvp for &e{target}&a!"
 pvp-disabled-other: "&eSuccessfully disabled pvp for &e{target}!"
 
@@ -25,7 +25,7 @@ pvp-enabled-by-default: false
 # executed after pvp enables
 # without the slash.
 
-# Set to [] to disable.
+# Set to [] to disable
 on-pvp-enable-console-commands: []
 
 # Console commands that get
@@ -46,7 +46,7 @@ cached-locations: false
 # Allow health to go down in pvp?
 # If this option is enabled, then
 # the player will appear to be taking damage
-# but their health will not go down.
+# but their health will not go down
 stay-at-max-health: false
 
 # PlaceholderAPI "%pvptoggler_pvp%" placeholder output
@@ -58,7 +58,7 @@ placeholders-output:
 
 # MySQL Connection
 # Use MySQL if you want to
-# sync PvP statuses.
+# sync PvP statuses
 mysql-connection:
   enabled: false
   address: ""
