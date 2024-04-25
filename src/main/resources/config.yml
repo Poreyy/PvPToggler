@@ -4,11 +4,11 @@ general-messages:
   only-players: "&cI'm sorry, but only players are allowed to perform this command."
   player-not-found: "&cCould not find specified player."
 
-# PvP Toggle messages
+# PvP toggle messages
 pvp-enabled: "&aSuccessfully enabled pvp!"
 pvp-disabled: "&eSuccessfully disabled pvp!"
 
-# PvP Toggle for other players messages
+# PvP toggle messages for other players
 pvp-enabled-other: "&aSuccessfully enabled pvp for &e{target}&a!"
 pvp-disabled-other: "&eSuccessfully disabled pvp for &e{target}!"
 
