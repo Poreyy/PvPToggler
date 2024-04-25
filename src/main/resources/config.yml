@@ -62,3 +62,7 @@ placeholders-output:
 mysql-connection:
   enabled: false
   address: ""
+  port: 3306
+  database: "minecraft"
+  username: "root"
+  password: ""
