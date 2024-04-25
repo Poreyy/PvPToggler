@@ -12,7 +12,7 @@ Installing is incredibly easy and only consists of 5 steps;
 1. Download the plugin jar
 2. Stop your server
 3. Drag and drop the plugin into your plugins folder
-4. (Re)start your server (do not reload)
+4. (Re)start your server - do not reload
 5. Done! You can now configure the plugin via the config.yml file and modify features as you wish!
 
 # Features
