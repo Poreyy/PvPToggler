@@ -10,7 +10,7 @@ People often have their server's pvp disabled in the server.properties file and 
 Installing is incredibly easy and only consists of 3 steps;
 
 1. Download the plugin jar
-2. Drag and drop the plugin into your plugins folder
+2. Drag and drop the plugin into your `plugins` folder
 3. (Re)start your server - **do not reload**
 
 Done! You can now configure the plugin's config.yml file and modify features as you wish!
@@ -36,6 +36,14 @@ they disable PvP.
 * Compatible; This plugin is written to be compatible on legacy(1.8) & newer(1.20) versions of Minecraft.
 
 * And more; You can discover the rest yourself!
+
+# Developer API
+
+```java
+public class Accesser {
+
+}
+```
 
 # Support
 For any problems, bugs, suggestions or questions regarding the plugin, contact the author using discord; *porey* is the username.
